@@ -1,0 +1,17 @@
+.header {
+  background-image: url('./images/header-bg.png');
+  background-size: cover;
+  background-position: top;
+  padding: $spacing;
+  text-align: center;
+  color: $color-text-light;
+
+  &__logo {
+    display: block;
+    margin: 100px auto $spacing auto;
+    max-width: 100%;
+    @media screen and (max-width: $breakpoint-medium) {
+      max-width: 60%;
+    }
+  }
+}

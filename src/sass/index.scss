@@ -1,0 +1,30 @@
+// Third party dependencies
+@import "../node_modules/css-reset-and-normalize-sass/scss/reset-and-normalize.scss";
+
+// Variables
+@import "./palette.scss";
+@import "./typography.scss";
+@import "./layout.scss";
+
+// Basic styles
+html {
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.container {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+// Components
+@import "./button.scss";
+@import "./turtle.scss";
+@import "./articleCard.scss";
+@import "./feature.scss";
+@import "./feature2.scss";
+@import "./main.scss";
+@import "./footer.scss";
+@import "./header.scss";

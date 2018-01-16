@@ -1,0 +1,28 @@
+// A rough linear scaling function that keeps the turtle from obstructing content at all widths
+$finishingTop: -590px;
+$finishingWidth: 875px;
+
+$startingTop: -290px;
+$startingWidth: 290px;
+
+$gradient: (($finishingTop - $startingTop) / ($finishingWidth - $startingWidth));
+$offset: ($finishingTop - $gradient * $finishingWidth);
+$maxWidth: $finishingWidth * 0.9;
+
+.turtle {
+  position: relative;
+  height: 0;
+  pointer-events: none;
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: $finishingTop;
+    z-index: 10;
+    max-width: $maxWidth;
+    @media screen and (max-width: 800px) {
+      width: 90vw;
+      top: calc(90vw * #{$gradient} + #{$offset});
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.feature2 {
+  background-image: url('./images/wave.png');
+  background-size: cover;
+  background-position: top;
+  text-align: center;
+  padding: 200px $spacing;
+  margin-top: -200px;
+  color: $color-text-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 200px $spacing-small 100px $spacing-small;
+  }
+
+  &__title {
+    font-size: $type-medium;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: $spacing;
+    @media screen and (max-width: $breakpoint-medium) {
+      padding: $spacing-small;
+      font-size: $type-small;
+    }
+  }
+
+  &__copy {
+    font-size: $type-large;
+    line-height: $line-large;
+    padding: $spacing;
+    max-width: 980px;
+    @media screen and (max-width: $breakpoint-medium) {
+      padding: $spacing-small;
+      font-size: $type-medium;
+      line-height: $line-medium;
+    }
+  }
+
+  &__downArrow {
+    padding: $spacing;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @media screen and (max-width: $breakpoint-medium) {
+      padding: $spacing-small;
+    }
+  }
+}

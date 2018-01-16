@@ -1,0 +1,47 @@
+.articleCard {
+  width: calc(33.33% -  #{$grid-spacing});
+  margin-bottom: $spacing;
+  transition: transform 0.2s ease;
+  display: block;
+  &:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 100%;
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &__image {
+    height: 257px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border-radius: 20px 20px 0px 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: top;
+  }
+
+  &__title {
+    color: $color-text-light;
+    font-size: $type-medium;
+    text-transform: uppercase;
+  }
+
+  &__blurb {
+    color: $color-text-dark;
+    line-height: $line-medium;
+    font-size: $type-medium;
+    margin: $spacing 0;
+    @media screen and (max-width: $breakpoint-medium) {
+      line-height: $line-small;
+      font-size: $type-small;
+      margin: $spacing-small 0;
+    }
+  }
+}
